@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,6 +16,159 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'home/carousel.css' %}">
+    <!--New css-->
+    <link rel="stylesheet" href="http://realinvest.demo/css/font-awesome/css/font-awesome.css">
+    <!--<link href="http://realinvest.demo/css/base.css" rel="stylesheet" />-->
+    <!--<link href="http://realinvest.demo/css/vendor.css" rel="stylesheet" />-->
+    <link href="http://realinvest.demo/css/main.css" rel="stylesheet" />
+    <style>
+      .carousel{
+        margin-bottom: auto;
+      }
+      .nav-link{
+        color: #1f3b42 !important;
+      }
+      .navbar-nav{
+         margin-left: 13% !important;
+      }
+      .mr-auto{
+         margin-right: 0px !important;
+      }
+      .bg-dark{
+         background-color: #eaeaea!important;
+         width: 79%;
+         margin: 0px auto;
+      }
+      .vertical-row {
+         float:left;
+         height:230px;
+         width:1px; /* edit this if you want */
+         background-color: white;
+      }
+      .home_p, .key_title_h2{
+         font-family : "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .nav-item a{
+        font-family : "Skolar Regular", Skolar, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .navbar-brand{
+        display: block;
+        padding: 0;
+        outline: 0;
+        width: 135px;
+        margin-left:100px;
+      }
+      .navbar-brand img{
+        max-width:100%;
+        height:auto;
+      }
+      #mc-form input[type="text"], input[type="email"]{
+        border-radius: 0px !important;
+        height: 4rem !important;
+        border: solid 2px !important;
+      }
+      #mc-form input[type="submit"]{
+        background-color: transparent !important;
+        border-color: transparent !important;
+        box-shadow: none !important;
+        border: solid 2px !important;
+        border-color: #FFFFFF;
+        height: 4.0rem !important;
+        border-radius: 0px !important;
+        padding 0rem !important;
+        line-height: 4.0rem !important;
+      }
+      .carousel-item , .active{
+        background-color: #eaeaea !important;
+      }
+      .carousel-heading, .carousel-text{
+        color: #444444;
+      }
+      .carousel-indicators{
+        position: relative;
+        bottom: -105px;
+      }
+      .carousel-indicators li {
+        border-radius: 12px;
+        width: 15px;
+        height: 15px;
+        background-color: #404040;
+        margin-left: 15px;
+     }
+     .carousel-indicators .active{
+        background-color: red !important;
+     }
+      .top_items{
+        position: relative;
+        margin-left: 42%;
+        border: 1px solid;
+        width: 17%;
+        height: 18%;
+     }
+     .fa{
+        font-size: 43px;
+     }
+     .btn{
+        background-color: transparent;
+        border: transparent;
+     }
+
+      @media screen and (max-width: 531px) {
+        .home_content { display: flex; flex-flow: column; }
+        .subscribe_h4{margin-top: 0px;}
+        .home {
+          background-repeat:no-repeat;
+          background-position:50% 50%;
+          background-size:cover;
+          height: auto;
+        }
+        .bg-dark{width: 100%;}
+        .carousel-indicators{
+            position: relative;
+            bottom: -87px;
+         }
+         .carousel-caption{
+            position: relative;
+            right:0;
+            left:0;
+         }
+         .carousel-text {
+            font-size: small;
+         }
+         .top_items{
+            position: relative;
+            margin-left: 49%;
+         }
+         .vertical-row{
+            height: 0px;
+         }
+    }
+
+     @media screen and (min-width: 532px) and (max-width: 1024px) {
+        .home {
+          background-repeat:no-repeat;
+          background-position:50% 50%;
+          background-size:cover;
+          height: auto;
+        }
+        .bg-dark{
+            min-width: 94%;
+            margin: 0 auto;
+        }
+        .carousel-indicators{
+            position: relative;
+            bottom: -105px;
+        }
+         .mr-auto{
+             font-size: 60%;
+        }
+        .navbar-brand{
+            margin-left: 4px;
+        }
+    }
+    </style>
+    <!--New css-->
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -24,42 +177,46 @@
 
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Carousel</a>
+          <div class="container-fluid">
+        <a class="navbar-brand" href="#" >
+            <img src="{% static 'home/image.png' %}">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
+          <ul class="nav navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" >HOME <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">OUR FOCUS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">PARTNERS</a>
+              <a class="nav-link " href="#">PARTNERS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">ROADMAP</a>
+              <a class="nav-link " href="#">ROADMAP</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">TEAM</a>
+              <a class="nav-link " href="#">TEAM</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">SUBSCRIBE</a>
+              <a class="nav-link " href="#">SUBSCRIBE</a>
             </li>
           </ul>
         </div>
+          </div>
       </nav>
     </header>
     <main role="main">
       <div id="home" class="container home">
         <div class="row title_text">
-          <h2>THE KEY TO YOUR FUTURE</h2>
+          <h2 class="key_title_h2">THE KEY TO YOUR FUTURE</h2>
         </div>
-        <div class="row home_content">
-          <div class="home_left">
-            <p class="home_p">
+        <div class="row home_content" style="justify-content:center;display:flex;">
+          <div class="home_left" style="float:left;max-width:500px; margin-right: 20px;">
+            <p class="home_p" style="color:white;">
                 REALinvest - A revolutionary online real estate
                 marketplace providing a secure, global and transparent
                 platform that will host multiple modules including
@@ -67,7 +224,33 @@
                 development crowdfunding and online property auctions
             </p>
           </div>
-          <div class="home_right">
+          <div class="vertical-row"></div>
+          <div class="home_right" style="float:right; margin-left: 20px;">
+
+            <!--Subscribe form-->
+
+            <div class="top_subscribe">
+            <div class="top_subscribe_form footer-subscribe">
+                <h4 class="subscribe_h4" id="subscribe_msg">Like to be the first? </br>subscribe to know more about us</h4>
+                <div id="subscribe_close_wrap"></div>
+                <div class="subscribe-form" id="subscribe-form">
+                    <form class="group" id="mc-form" novalidate="true">
+                        <div data-drip-attribute="description"></div>
+                        <div>
+                            <input class="fname" id="drip-fname" name="fname" placeholder="Full Name" required="" type="text" value="" />
+                            <input class="email" id="drip-email" name="email"  placeholder="Email Address" required="" type="email" value=""  />
+                        </div>
+                        <div>
+                            <input name="submit" type="submit" value="Yes I want to know more" />
+
+                        </div>
+                        <div></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+           <!--Subscribe form-->
 
           </div>
         </div>
@@ -119,17 +302,18 @@
           <div class="row carosel_title">
             <h2>Why we exist?</h2>
           </div>
+
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
             <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <div class="top_items">1</div>
               <div>
                 <div class="carousel-caption text-left">
                   <div class="carousel_line">
@@ -152,7 +336,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+    <div class="top_items">2</div>
               <div class="container">
                 <div class="carousel-caption text-left">
                   <div class="carousel_line">
@@ -175,7 +359,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+<div class="top_items">3</div>
               <div class="container">
                 <div class="carousel-caption text-left">
                   <div class="carousel_line">
@@ -198,7 +382,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+<div class="top_items">4</div>
               <div class="container">
                 <div class="carousel-caption text-left">
                   <div class="carousel_line">
@@ -221,7 +405,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+<div class="top_items">5</div>
               <div class="container">
                 <div class="carousel-caption text-left">
                   <div class="carousel_line">
@@ -244,7 +428,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+<div class="top_items">6</div>
               <div class="container">
                 <div class="carousel-caption text-left">
                   <div class="carousel_line">
@@ -299,6 +483,7 @@
           <div class="row focus_title">
             <h2>Roadmap</h2>
           </div>
+
         </div> 
         <!-- Marketing messaging and featurettes
         ================================================== -->
@@ -342,4 +527,6 @@
       </div>
     </main>
   </body>
+
+    
 </html>
