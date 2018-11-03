@@ -15,7 +15,7 @@ class Roadmap(BaseModel):
     year = models.IntegerField(('year'), choices=[(x, str(x)) for x in range(2010,2025)],unique= True)
     icon_type = models.CharField(max_length=40, choices=ICON_TYPE)
     description = models.TextField()
-    background_image = models.FileField(upload_to='roadmap_images')
+    background_image = models.FileField(upload_to='roadmap_images', default='null')
 
 
     def __str__(self):
