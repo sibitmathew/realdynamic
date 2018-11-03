@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('subscriber_fname', models.CharField(max_length=80)),
                 ('subscriber_lname', models.CharField(max_length=80)),
-                ('email', models.EmailField(max_length=254)),
+                ('email', models.EmailField(max_length=254,unique= True)),
             ],
             options={
                 'abstract': False,
