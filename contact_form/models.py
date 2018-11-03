@@ -6,6 +6,7 @@ from icobase.models import BaseModel
 class ContactForm(BaseModel):
     REASON_TYPE = (
         ('A','Reason 1'),
+        ('B', 'Reason 2'),
     )
     contact_reason = models.CharField(max_length=50, choices=REASON_TYPE )
     contact_name = models.CharField(max_length=80)

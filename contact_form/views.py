@@ -6,6 +6,8 @@ from rest_framework.response import Response
 
 from contact_form.models import ContactForm
 from contact_form.serializer import ContactFormSerializer
+from django.http import HttpResponse
+import simplejson as json
 
 @csrf_exempt
 @api_view(['POST'])

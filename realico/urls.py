@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+admin.site.site_title = "Administration | REALINVEST"
+admin.site.site_header = "REALINVEST Administration"
+
 urlpatterns = [
     url(r'^$', include('home.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^api/', include('contact_form.urls')),
+    url(r'^sub/', include('subscription.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
