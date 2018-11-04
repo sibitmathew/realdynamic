@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <link href="{% static 'home/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+      <link href="{% static 'home/favicon.ico' %}" rel="icon" type="image/x-icon">
 
     <title>REALInvest</title>
 
@@ -291,6 +292,8 @@
      .error {
          color: red !important;
       }
+
+
 
       @media screen and (max-width: 531px) {
         .home_content { display: flex; flex-flow: column; }
