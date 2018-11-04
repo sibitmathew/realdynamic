@@ -52,25 +52,6 @@
 
           });
 
-        /*$('.goal_retirement').click(function(){
-            console.log('goal click');
-        $('.roadmap').fadeTo('ease', 0.3, function()
-        {
-            $(this).css('background-image', 'url(https://wallpaperscraft.com/image/tropics_sea_palm_trees_vacation_84858_2412x1810.jpg)');
-        }).fadeTo('slow', 1);
-
-          });
-
-        $('.goal_involve').click(function(){
-            console.log('goal click');
-        $('.roadmap').fadeTo('ease', 0.3, function()
-        {
-            $(this).css('background-image', 'url(http://www.churchmilitant.com/images/uploads/2015-06-12-niles-x.jpg)');
-        }).fadeTo('slow', 1);
-
-          });
-        */
-
           $('.focus_yr').click(function(){
             var diff = $(this).parent()[0].offsetLeft;
             TweenLite.to($('.date').parent(), 1, {x:((viewport*0.25) - diff), onComplete:function(){
