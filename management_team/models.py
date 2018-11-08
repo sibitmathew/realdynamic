@@ -11,7 +11,8 @@ class TeamMember(BaseModel):
     full_name = models.CharField(max_length=40)
     title = models.CharField(max_length=50)
     photo = models.FileField(upload_to='member_photo', null=True, blank=True)
-    linkedin = models.CharField(max_length=200)
+    #linkedin = models.CharField(max_length=200)
+    linkedin = models.URLField()
     team = models.CharField(max_length=40, choices=TEAM_TYPE)
 
     def __str__(self):
