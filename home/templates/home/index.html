@@ -379,12 +379,12 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <h4 class="check-title">
-                      <a data-toggle="collapse" {% if forloop.first %}class="active"{% endif %} data-parent="#accordion" href="#check1">
+                      <a data-toggle="collapse" {% if forloop.first %}class="active"{% endif %} data-parent="#accordion" href="#check{{ forloop.counter }}">
                           <span class="acc-icons"></span>{{ slide.the_problem }}
                       </a>
                   </h4>
                 </div>
-                <div id="check1" class="panel-collapse collapse {% if forloop.first %}in{% endif %}">
+                <div id="check{{ forloop.counter }}" class="panel-collapse collapse {% if forloop.first %}in{% endif %}">
                   <div class="panel-body">
                     <p>
                       {{ slide.the_solution }}
