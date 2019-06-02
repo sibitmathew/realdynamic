@@ -13,6 +13,7 @@ class News(BaseModel):
     )
     title = models.CharField(max_length=50)
     category = models.CharField(max_length=40, choices=NEWS_TYPE)
+    news_image = models.FileField(upload_to='news_images', null=True, blank=True)
     content = RichTextUploadingField()
 
     def __str__(self):

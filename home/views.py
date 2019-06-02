@@ -4,6 +4,7 @@ from management_team.models import TeamMember
 from slider.models import Slider
 from roadmap.models import Roadmap
 from ourfocus.models import Ourfocus
+from marketing.models import News
 
 def create_groups(members):
     group_list = []
@@ -28,6 +29,7 @@ def index(request):
     sliders = Slider.objects.filter()
     roadmaps = Roadmap.objects.filter()
     focuses = Ourfocus.objects.filter().order_by('id')
+    news = News.objects.filter().order_by('id')
     context = {
         'core_team': core_team,
         'advisor_team': advisor_team,
@@ -35,7 +37,8 @@ def index(request):
         'sliders': sliders,
         'yrs': list(range(2015, 2025)),
         'roadmaps':roadmaps,
-        'focuses': focuses
+        'focuses': focuses,
+        'news': news,
     }
     return render(request, 'home/index.html', context)
 

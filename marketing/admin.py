@@ -14,7 +14,7 @@ class NewsAdminForm(forms.ModelForm):
     category = forms.ChoiceField(choices=NEWS_TYPE)
     class Meta:
         model = News
-        fields = ('title', 'category', 'content')
+        fields = ('title', 'category', 'news_image', 'content')
 
 class NewsAdmin(admin.ModelAdmin):
     form = NewsAdminForm
