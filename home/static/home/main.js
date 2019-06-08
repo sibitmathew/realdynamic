@@ -242,5 +242,10 @@
         });
 
     };
+    //Redirect to blog page
+    $('.blog_red').click(function(){
+        var blog_id = $(this).attr('data-id');
+        window.location.href = 'blog/'+blog_id;
+    });
 
  });

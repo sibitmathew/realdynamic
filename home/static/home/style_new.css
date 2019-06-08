@@ -1011,7 +1011,7 @@ div#preloader {
 /*--------------------------------*/
 
 .reviews-area {
-  background: url(../home/img/background/bg1.jpg);
+  background: url("../home/img/background/bg1.jpg");
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1879,7 +1879,7 @@ div#preloader {
 /*----------------------------------------*/
 
 .header-bg {
-  background: url(../img/slider/slider1.jpg);
+  background: url("/static/home/img/slider/slider1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;

@@ -593,14 +593,14 @@
               </div>
               <div class="blog-text">
                 <h3>
-                                        <a href="#">{{articles.title|safe}}</a>
+                                        <a href="javascript:void(0);" data-id = "{{articles.id}}" class="blog_red">{{articles.title|safe}}</a>
 									</h3>
                 <p>
                   {{articles.content|safe|slice:"50"}}
                 </p>
               </div>
               <span>
-									<a href="#" class="ready-btn">Read more</a>
+									<a href="javascript:void(0);" data-id = "{{articles.id}}" class="ready-btn blog_red" >Read more</a>
 								</span>
             </div>
             <!-- Start single blog -->
