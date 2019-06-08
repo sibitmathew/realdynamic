@@ -56,6 +56,10 @@ LOGGING = {
 # XDomain configuration
 XDOMAIN_ORIGIN_REGEX = 'http://*'
 
+STATICFILES_DIRS = (
+   'home/static',
+)
+
 # Django debug toolbar for local development
 # INSTALLED_APPS.extend([
 #     'debug_toolbar',
