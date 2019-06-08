@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     url(r'^api/', include('contact_form.urls')),
     url(r'^sub/', include('subscription.urls')),
+    url(r'^blog/', include('marketing.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
