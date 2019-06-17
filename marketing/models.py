@@ -15,6 +15,7 @@ class News(BaseModel):
     category = models.CharField(max_length=40, choices=NEWS_TYPE)
     news_image = models.FileField(upload_to='news_images', null=True, blank=True)
     content = RichTextUploadingField()
+    display_text = models.TextField(max_length=200)
 
     def __str__(self):
         return self.title
